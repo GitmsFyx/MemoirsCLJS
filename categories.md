@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 文章分类
+
 ---
 
 # 所有文章分类
@@ -24,7 +25,7 @@ title: 文章分类
   <ul>
     {% for post in category[1] %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="/MemoirsCLJS/{{ post.url }}">{{ post.title }}</a>
         <small>{{ post.date | date_to_string }}</small>
       </li>
     {% endfor %}
