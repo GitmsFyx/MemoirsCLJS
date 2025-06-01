@@ -1,3 +1,7 @@
+---
+categories: ASP.net
+---
+
 # HttpClient
 
 建议在应用程序生命周期中重复使用实例.

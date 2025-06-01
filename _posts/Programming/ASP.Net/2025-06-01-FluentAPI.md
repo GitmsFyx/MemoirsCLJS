@@ -1,3 +1,7 @@
+---
+categories: ASP.net
+---
+
 # FluentAPI
 
 CodeFirst 代码优先，创建数据库

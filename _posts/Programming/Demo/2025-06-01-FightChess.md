@@ -1,3 +1,7 @@
+---
+categories: something
+---
+
 # FightChess
 
 飞行棋

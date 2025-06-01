@@ -1,3 +1,7 @@
+---
+categories: ASP.net
+---
+
 # DependencyInjection
 
 安装包 : `Microsoft.Extensions.DependencyInjection`
