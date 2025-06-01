@@ -1,3 +1,7 @@
+---
+categories: linux
+---
+
 # firewalld
 
 动态防火墙,opensuse15开始使用
