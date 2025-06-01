@@ -1,3 +1,7 @@
+---
+categories: dotnet
+---
+
 # Json序列号和反序列化
 
 System.Text.Json

@@ -1,3 +1,7 @@
+---
+categories: dotnet
+---
+
 # dotnet ClI
 
 `dotnet new <template>` 创建dotnet模板
