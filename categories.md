@@ -1,7 +1,6 @@
 ---
 layout: default
 title: 文章分类
-permalink: /categories/
 ---
 
 # 所有文章分类
