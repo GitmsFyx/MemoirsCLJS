@@ -1,3 +1,7 @@
+---
+categories: linux
+---
+
 # archlinux
 
 轻量化,极简,高定制的系统,需要一定的动手能力,拥有无与伦比的wiki和文档(中文),

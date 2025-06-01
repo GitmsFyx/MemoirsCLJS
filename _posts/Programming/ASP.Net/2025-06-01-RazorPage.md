@@ -1,3 +1,7 @@
+---
+categories: ASP.net
+---
+
 # ASP.NET Core Razor Pages
 
 ## 入门

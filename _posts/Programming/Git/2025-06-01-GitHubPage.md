@@ -1,3 +1,7 @@
+---
+categories: git
+---
+
 # GitHubPage
 
 从源分支发布站点默认会使用jekyll构建

@@ -1,3 +1,7 @@
+---
+categories: Sqlserver
+---
+
 # 外连接
 
 外连接

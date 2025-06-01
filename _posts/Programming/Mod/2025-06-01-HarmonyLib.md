@@ -1,3 +1,7 @@
+---
+categories: something
+---
+
 # Harmony
 
 每次使用都要创建一个实例. `var harmony = new Harmony("yourmod");`

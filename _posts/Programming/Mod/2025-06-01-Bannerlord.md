@@ -1,3 +1,7 @@
+---
+categories: something
+---
+
 # 骑砍2
 
 .Net语言制作mod

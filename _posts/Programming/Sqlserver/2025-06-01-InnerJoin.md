@@ -1,3 +1,7 @@
+---
+categories: Sqlserver
+---
+
 # 内连接
 
 `select * from A,B`

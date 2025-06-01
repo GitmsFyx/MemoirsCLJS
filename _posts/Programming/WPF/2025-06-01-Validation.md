@@ -1,3 +1,7 @@
+---
+categories: WPF
+---
+
 # Validation
 
 验证

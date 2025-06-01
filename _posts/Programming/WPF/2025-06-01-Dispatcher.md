@@ -1,3 +1,7 @@
+---
+categories: WPF
+---
+
 # Dispatcher
 
 线程管理器,是个单例.
