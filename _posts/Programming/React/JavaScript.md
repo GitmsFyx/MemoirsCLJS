@@ -28,6 +28,11 @@ onclick调用的方法为直接调用.this为Window(严格模式为undefined)
 -   `console.log(...arg)` arg为数组.该代码会复制一个新的数组,输出的时候会foreach
 -   `export`可以在其他文件中访问
 -   `default`表示此为主要函数
+-   `ref` 关键字,这个实例会被收集到refs中,拿到的是真实节点，不是虚拟DOM
+    - `ref={c=>this.input1=c}` 回调模式,传入的参数其实是自己
+    - `ref="string"` 字符串形式,**不推荐使用,效率低**
+
+-   表单提交,哪怕不提供地址也仍然会刷新页面.
 
 ## 样式
 

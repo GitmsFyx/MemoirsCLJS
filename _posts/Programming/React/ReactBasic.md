@@ -106,7 +106,6 @@ babel.min.js 将js转化为jsx
 1.  Props 属性
     
     只读属性
-
     ```jsx
     //可以以这种方式赋值  
     <person name="tom">
@@ -115,6 +114,9 @@ babel.min.js 将js转化为jsx
     const p={name:"tom",age:18}
     <person {...p}>
     ```
+
+1.  refs 引用
+    不要过于使用`ref`
 
 ## 数据
 
