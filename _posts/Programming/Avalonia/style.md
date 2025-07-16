@@ -48,6 +48,10 @@ public class MyButton : Button
 >外面还包了一层 `template` ,鼠标所悬停的并不是 `Button` 本控件。而样式只对当前控件起作用  
 >所以要使用`Button:pointerover /template/ ContentPresenter` 得到`Button`的`template`里面的`ContentPresenter`
 
+----
+
 在`:`之前打一个空格可以弹出提示，但是之后要删除空格，因为格式不对不起作用.
 
 `F12` 在应用中可以打开调试工具.可以看到有哪些伪类.
+
+博客园--MChuang 
