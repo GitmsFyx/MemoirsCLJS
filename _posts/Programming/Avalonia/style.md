@@ -1,0 +1,49 @@
+---
+categories: Avalonia
+---
+
+# 样式
+
+选择器(Selector) 和 设置器(Setter)
+
+``` xml
+<Window ... >
+    <Window.Styles>
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Styles>
+    <StackPanel Margin="20">
+       <TextBlock Classes="h1">Heading 1</TextBlock>
+    </StackPanel>
+</Window>
+```
+
+## 样式键
+
+>[!WARNING]
+>这与 WPF/UWP 相比逻辑是相反的：在这些框架中，当你派生一个新的控件时，它将被样式化为其基础控件，除非你覆盖 DefaultStyleKey 属性。在 Avalonia 中，控件将使用其具体类型进行样式化，除非提供了不同的样式键.  
+>大致的意思就是在Avalonia中,仅仅继承于其他类不会被当成其他类样式化，而是要依靠样式键.
+
+``` C#
+public class MyButton : Button
+{
+    // MyButton 将会被作为标准的 Button 控件样式化。
+    protected override Type StyleKeyOverride => typeof(Button);
+}
+```
+
+## 伪类
+
+``` xml
+    <Style Selector="Button:focus">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+```
+
+>[!WARNING]
+>在Button中直接使用 `Button:pointerover` 将会不起作用，原因是默认的 `FluentUI` 主题的Button不止一个控件,
+>外面还包了一层 `template` 鼠标所悬停的并不是 `Button` 本控件。而样式只对当前控件起作用  
+>所以要使用`Button:pointerover /template/ ContentPresenter` 得到`Button`的`template`里面的`ContentPresenter`

@@ -1,3 +1,7 @@
+---
+categories: linux
+--- 
+
 # linuxmint
 
 debian 系 ubuntu的子发行版
