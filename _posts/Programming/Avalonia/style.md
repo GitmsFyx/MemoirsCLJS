@@ -48,6 +48,10 @@ public class MyButton : Button
 >外面还包了一层 `template` ,鼠标所悬停的并不是 `Button` 本控件。而样式只对当前控件起作用  
 >所以要使用`Button:pointerover /template/ ContentPresenter` 得到`Button`的`template`里面的`ContentPresenter`
 
+`<Style Selector="listbox>textblock:pointerover">` 鼠标悬停在listbox里面的textblock时
+
+`<Style Selector="listbox:pointerover>textblock">` 鼠标悬停在listbox时里面的textblock
+
 ----
 
 在`:`之前打一个空格可以弹出提示，但是之后要删除空格，因为格式不对不起作用.
