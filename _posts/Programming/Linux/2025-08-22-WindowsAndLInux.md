@@ -9,8 +9,9 @@ categories: linux
 - 按顺序直接安装
 - 双硬盘双EFI
 
->[!IMPORTANT]
+>[!TIP]
 >这里不讲基础的分区操作.
+>安装Windows可以使用微PE作为工具,好处是下载方便,优启通只有网盘不太方便.
 
 ## 顺序安装
 
