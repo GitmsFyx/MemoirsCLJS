@@ -16,8 +16,37 @@ itemControl
 
 `ListBoxItem` 里面单独的item控件 是个透明的框(可以和鼠标交互,修改背景颜色没用) 
 
+## Template
 
-## 用法
+``` Xaml
+
+<ItemsControl>
+
+    <!--这是设置布局-->
+    <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+            <StackPanel Orientation="Horizontal"></StackPanel>
+        </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+
+    <!--这是设置数据模板-->
+    <ItemsControl.ItemTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Vertical" Margin="5,0,5,0">
+                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center">
+                <TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </ItemsControl.ItemTemplate>
+
+    <!--这是设置样式-->
+    <ItemsControl.ItemContainerStyle>
+    </ItemsControl.ItemContainerStyle>
+
+</ItemsControl>
+```
+
+用法
 
 ``` xaml
 <Control>
