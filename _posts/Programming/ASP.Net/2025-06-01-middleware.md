@@ -10,7 +10,11 @@ categories: ASP.net
 执行顺序  
 middleware 1->middleware 2->middleware 3->middleware 2->middleware 1
 
+
+
 ## Base
+
+**仅在受到请求时执行**
 
 ### app.Use()
 
@@ -34,9 +38,9 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
 
 ### app.Run() 
 
-终结件
+终结中间件
 
-仅在受到请求时执行, **但是不会将请求转发到后续中间件** ,会在`app.Use()`执行完后执行,不像是个中间件,而是个终结件.
+**不会将请求转发到后续中间件** ,会在`app.Use()`执行完后执行,不像是个中间件,而是个终结件.
 
 有一个参数的委托，参数是一个 HttpContext 对象 并且返回 Task
 
