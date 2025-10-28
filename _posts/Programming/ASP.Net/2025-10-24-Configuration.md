@@ -110,7 +110,7 @@ public class HomeController : Controller
 **初始化**
 
 1.  打开终端(用IDE终端更方便)
-2.  进入项目根目录
+2.  进入项目根目录(不进入会报错,因为他要找到你的csproj)
 3.  `dotnet user-secrets init` 初始化,会自动生成一个十六进制代码作为userSecret的ID，并以此名存为一个JSON存在app data中.
 
 **查看** 
@@ -150,7 +150,7 @@ cd 进入项目根目录
 
 ## Json配置
 
-防止将太多配置全部写在`appsetting`中,所以启用其他配置.
+防止将太多配置全部写在`appsetting`中,所以启用其他配置(大型应用程序才用的上)
 
 在项目根目录创建一个JSON文件.
 
