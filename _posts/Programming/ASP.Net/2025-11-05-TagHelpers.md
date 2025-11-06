@@ -27,6 +27,18 @@ categories: ASP.net
 
 `asp-controller`和`asp-action`其实就是填充`url`只不过可以智能提示
 
+`asp-items` 在`<selsect>中使用`需要一个`IEnumerable<SelectListItem>`,你需要在控制器中提供一个(使用LINQ Select).
+
+`asp-append-version="true"` 用于图片生成Hash值,会自动生成`?v=HashID`
+
+`asp-route-x` 路由参数
+
+        //[Route("[action]/{personID}")]
+        
+        <a asp-controller="Persons" 
+        asp-action="Edit" 
+        asp-route-personID="@person.PersonID">Edit</a>
+
 
 ## 常用
 
@@ -75,3 +87,10 @@ categories: ASP.net
 `div`
 
 `asp-validation-summary`
+
+--------------------
+客户端验证验证用到的
+
+`asp-validation-for` 单个属性验证信息
+
+`asp-validation-summary` 验证信息汇总
