@@ -13,7 +13,7 @@ categories: ASP.net
 
 ## 作用
 
-`asp-for` 会自动生成  
+`asp-for` 会自动生成  ,可以用`disable`禁用提交
 *   `name` 方便提交表单  
 *   `id`  方便聚焦  
 *   `value` 如果有值则填充  
@@ -33,8 +33,14 @@ categories: ASP.net
 
 `asp-route-x` 路由参数
 
-        //[Route("[action]/{personID}")]
         
+        [Route("[action]/{personID}")]
+        [HttpGet]
+        public IActionResult Edit(Guid personID)
+        {
+            return View();
+        }
+
         <a asp-controller="Persons" 
         asp-action="Edit" 
         asp-route-personID="@person.PersonID">Edit</a>

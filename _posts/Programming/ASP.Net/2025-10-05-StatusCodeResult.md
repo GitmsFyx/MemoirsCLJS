@@ -55,6 +55,9 @@ return RedirectToAction("Books","Store",new {});
 return RedirectToActionPermanent("Books","Store",new {id=1});
 ```
 
+>[!WARNING]
+>会重新执行控制器方法,相当于重新进入了一次页面.
+
 ## LocalRedirectResult
 
 重定向到本地Url，同样有permanent版本
