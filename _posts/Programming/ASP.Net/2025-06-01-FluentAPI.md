@@ -4,20 +4,53 @@ categories: ASP.net
 
 # FluentAPI
 
-CodeFirst 代码优先，创建数据库
+是EFCORE里面的内置方法,因为是数据库设计,需要和迁移一起使用.
 
-DataAnnotation
+```C#
+//SomethingDbContext.cs
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    //Fluent API,Entity级别
+    modelBuilder.Entity<Person>().Property(p => p.TIN)
+        .HasColumnName("TaxIdentificationNumber")
+        .HasColumnType("varchar(8)")
+        .HasDefaultValue("ABC1234");
 
-> 直接 `[Required]` 标注
+    //HasIndex添加索引能提高查询速度,但是降低插入等速度
+    //IsUnique唯一,和上面默认值冲突,这里仅作参考
+    modelBuilder.Entity<Person>().HasIndex(p => p.TIN).IsUnique();
+}
+```
 
-FluentAPI
+## 表关系
+```C#
+//SomethingDbContext.cs
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    //Table Relations,一对多,
+    modelBuilder.Entity<Person>(p =>
+    {
+        //Person有一个Country
+        p.HasOne<Country>(p => p.Country)
+            //并且Country有很多Person
+            .WithMany(c => c.Persons)
+            //外键为Person的CountryId
+            .HasForeignKey(p=>p.CountryId);
+    });
+}
+```
 
-> 创建一个类继承 `IEntityTypeConfiguration<Person>`
->
->     clasee PersonConfig: IEntityTypeConfiguration<Person> 
->     {
->         public void Configure(EntityTypeConfiguration<Person> builder)
->         {
->             //具体还没看，在用DataAnnotations
->         }
->     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
